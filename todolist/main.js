@@ -20,13 +20,23 @@ if(answer.action === "Add Task"){
  tasks = addTask(tasks, task);
 
 } else if(answer.action === 'Mark Task as Done'){
-const {index} = 
-
+const {index} = await inquirer.prompt([
+    {type: "number" , name: "index", message: "Enter task index to mark as 'done':"}
+])
+tasks = markTaskAsDone(tasks, index);
 } else if(answer.action === 'Delete Task'){
 
+    const {index} = await inquirer.prompt([
+        {type: "number" , name: "index", message: "Enter task index to delete:"}
+    ]);
 } else if(answer.action === 'View Task'){
-
+viewTasks(tasks);
 } else {
+console.log('Goodbye!');
+return;
+}
+}
 
-}
-}
+
+// const {sale} = {item: "perfume" , cost: 19.99, sale: true }
+//sale = true
