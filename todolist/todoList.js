@@ -1,4 +1,6 @@
-export function addTask(tacks, task) {
+import _ from "lodash";
+
+export function addTask(tasks, task) {
     const taskObject = {
         "name": task, //string
         "done": false //boolean
@@ -21,22 +23,22 @@ console.log(`Task marked as done: ${tasks[index].name}!`);
 export function deleteTasks(tasks, index) {
 if (tasks[index]) {
   const deletedTasks =  tasks.splice(index, 1); 
-  console.log(`task has been deleted: ${deletedTask[0].name}`)
+  console.log(`task has been deleted: ${deletedTasks[0].name}`)
 } else { 
     console.log("tasks does not exist. please check index value.")
 }
 return tasks;
 }
 
-export function viewTask() {
-const groupedTasks = _.groupedBy(tasks, "done");
+export function viewTask(tasks) {
+const groupedTasks = _.groupBy(tasks, "done");
 
 console.log("\n\n\n pending tasks:");
-(groupedTasks[false] || []).forEach((task)), i => 
-console.log(`${i}. ${task.name}`);
+(groupedTasks[false] || []).forEach((task, i) => 
+console.log(`${i}. ${task.name}`));
  
 console.log("\n\n\n Done tasks:");
-(groupedTasks[true] || []).forEach((task), i => 
+(groupedTasks[true] || []).forEach((task, i) => 
 console.log(`${i}. ${task.name}`));
 }
 
