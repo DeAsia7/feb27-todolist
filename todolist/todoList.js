@@ -49,3 +49,8 @@ define each task
 -the ability to be marked as done
 .splice is taking away how many elements u want. (1) only one will be deleted
 */
+
+/* cd todolist
+npm init
+npm install inquirer lodash
+*/

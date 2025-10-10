@@ -2,7 +2,10 @@ import inquirer from 'inquirer';
 import _ from 'lodash';
 import {addTask, markTaskAsDone, deleteTasks, viewTask} from './todoList.js';
 
+//empty [] holds arrays of tasks
 let tasks = [];
+
+
  let flag = true;
 
 async function mainMenu(){
