@@ -28,6 +28,7 @@ if(answer.action === "Add Task"){
  tasks = addTask(tasks, task);
 
 } else if (answer.action === 'Mark Task as Done'){
+    //grabbing specific index from user
 const {index} = await inquirer.prompt([
     {type: "number",
      name: "index", 
