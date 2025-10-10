@@ -12,6 +12,7 @@ return tasks;
 }
 
 export function markTaskAsDone(tasks, index) {
+    //check if the tasks array contains the certian index
 if(tasks [index]) {
 tasks[index].done = true;
 console.log(`Task marked as done: ${tasks[index].name}!`);

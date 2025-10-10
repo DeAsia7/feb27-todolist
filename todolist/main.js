@@ -5,7 +5,6 @@ import {addTask, markTaskAsDone, deleteTasks, viewTask} from './todoList.js';
 //empty [] holds arrays of tasks
 let tasks = [];
 
-
  let flag = true;
 
 async function mainMenu(){
