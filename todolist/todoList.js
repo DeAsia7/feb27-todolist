@@ -19,6 +19,7 @@ console.log(`Task marked as done: ${tasks[index].name}!`);
 } else { 
     console.log("tasks does not exist. please check index value.")
 }
+return tasks;
 }
 
 export function deleteTasks(tasks, index) {

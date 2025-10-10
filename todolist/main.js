@@ -5,7 +5,8 @@ import {addTask, markTaskAsDone, deleteTasks, viewTask} from './todoList.js';
 //empty [] holds arrays of tasks
 let tasks = [];
 
- let flag = true;
+ let flag = true; //keep the menu running
+
 
 async function mainMenu(){
     while(flag == true){
@@ -48,7 +49,7 @@ viewTask(tasks);
 
 } else {
 console.log('Goodbye!');
-flag == false;
+flag == false; // exit the menu
 return;
 }
 }
