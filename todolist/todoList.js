@@ -57,4 +57,5 @@ npm init
 npm install inquirer lodash
 make sure to npm install each time u open the project
 todolist then ls then cd todolist 
+node main.js
 */
